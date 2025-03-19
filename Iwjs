@@ -1,0 +1,10 @@
+while wait() do
+game:GetService("ReplicatedStorage").Source.Rolling.Remotes.Activate:InvokeServer()
+game:GetService("ReplicatedStorage").Source.Rolling.Remotes.ClaimReward:FireServer()
+local args = {
+    [1] = "GodlikeElixir",  -- The name of the item (in this case, a potion)
+    [2] = 10000000          -- The associated value for the potion (likely its effect or power)
+}
+
+game:GetService("ReplicatedStorage").Source.Potions.Remotes.Use:InvokeServer(unpack(args))
+end
